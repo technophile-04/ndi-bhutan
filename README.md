@@ -19,10 +19,7 @@
 - 🔐 **Secure Identity Sharing**: Users can securely share their Full Name and National ID Number
 - 📊 **Verification Dashboard**: Track verification history and status
 - 🪝 **Webhook Integration**: Real-time updates when verification is completed
-- 🌐 **Responsive UI**: Modern, accessible interface built with Tailwind CSS and DaisyUI
-- 🔄 **Real-time Polling**: Automatic updates when verification status changes
 
-![NDI Verification Demo](https://github.com/user-attachments/assets/verification-demo-screenshot.png)
 
 ## Requirements
 
@@ -36,12 +33,10 @@ Before you begin, you need to install the following tools:
 
 ## Setup
 
-### 1. Clone and Install Dependencies
+### 1. Setup the repo: 
 
 ```bash
-git clone <your-repo-url>
-cd bhutan-ndi
-yarn install
+npx create-eth@latest -e https://github.com/technophile-04/ndi-bhutan/
 ```
 
 ### 2. Environment Configuration
@@ -61,8 +56,8 @@ NDI_CLIENT_ID=your_ndi_client_id_here
 NDI_CLIENT_SECRET=your_ndi_client_secret_here
 
 # Webhook Configuration
-WEBHOOK_ID=your_unique_webhook_id_here
-WEBHOOK_TOKEN=your_webhook_auth_token_here
+WEBHOOK_ID=your_unique_webhook_id_here (can be random)
+WEBHOOK_TOKEN=your_webhook_auth_token_here (can be random)
 
 # Ngrok Configuration (for local development)
 NGROK_API=http://localhost:4040/api/tunnels
@@ -73,7 +68,6 @@ NGROK_API=http://localhost:4040/api/tunnels
 1. Register at the Bhutan NDI Developer Portal
 2. Create a new application
 3. Obtain your `client_id` and `client_secret`
-4. Generate a unique `webhook_id` and `webhook_token` for your application
 
 ### 3. Setup Ngrok (Required for Webhooks)
 
@@ -146,53 +140,3 @@ Ngrok is required to expose your local development server for webhook callbacks 
          │                       │                       │
 ```
 
-## Troubleshooting
-
-### Common Issues
-
-1. **Ngrok Not Working**:
-
-   - Ensure ngrok is running and accessible at `http://localhost:4040`
-   - Check that your ngrok authtoken is configured
-   - Verify the ngrok URL is HTTPS (required by NDI service)
-
-2. **Environment Variables**:
-
-   - Double-check your NDI credentials are correct
-   - Ensure `.env.local` file is in the correct location (`packages/nextjs/`)
-   - Restart the development server after changing environment variables
-
-3. **QR Code Not Generating**:
-
-   - Check the browser console for API errors
-   - Verify your NDI credentials and network connectivity
-   - Ensure the ngrok tunnel is active and reachable
-
-4. **Webhook Not Receiving Data**:
-   - Confirm ngrok is exposing port 3000
-   - Check that the webhook URL in NDI service matches your ngrok URL
-   - Look for webhook registration errors in the console
-
-### Development Notes
-
-- This demo uses Bhutan NDI **staging environment** - not suitable for production
-- Verification history is stored in browser localStorage (not persistent)
-- For production deployment, implement proper database storage and webhook security
-- The application includes smart contract capabilities via Scaffold-ETH 2 for future blockchain integration
-
-## Built With
-
-- [Scaffold-ETH 2](https://scaffoldeth.io) - Ethereum development stack
-- [Next.js](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [DaisyUI](https://daisyui.com/) - Component library
-- [Bhutan NDI API](https://bhutanndi.com/) - Identity verification service
-
-## Contributing
-
-We welcome contributions! Please see the [contributing guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENCE) file for details.
