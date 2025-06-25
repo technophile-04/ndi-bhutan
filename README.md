@@ -32,7 +32,7 @@ Before you begin, you need to install the following tools:
 ### 1. Setup the repo: 
 
 ```bash
-npx create-eth@latest -e https://github.com/technophile-04/ndi-bhutan/
+npx create-eth@latest -e technophile-04/ndi-bhutan
 ```
 
 ### 2. Environment Configuration
