@@ -1,11 +1,7 @@
 # 🇧🇹 Bhutan NDI Verification Demo
 
-<h4 align="center">
-  <a href="#features">Features</a> |
-  <a href="#requirements">Requirements</a> |
-  <a href="#setup">Setup</a> |
-  <a href="#usage">Usage</a>
-</h4>
+<img width="1512" alt="Screenshot 2025-06-25 at 10 22 19 AM" src="https://github.com/user-attachments/assets/7717e179-5042-473b-b425-b04928261c71" />
+
 
 🏗️ **Built on Scaffold-ETH 2**: A complete demo application showcasing Bhutan's National Digital Identity (NDI) verification service integration.
 
